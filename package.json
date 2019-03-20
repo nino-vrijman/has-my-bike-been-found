@@ -2,9 +2,10 @@
   "name": "has-my-bike-been-found",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dry-run": "cross-env IS_DRY_RUN=true node .",
+    "dry-run:watch": "nodemon --exec 'npm run dry-run'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,14 @@
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.2",
     "ora": "^3.0.0",
-    "puppeteer": "^1.12.1"
+    "puppeteer": "^1.12.1",
+    "rxjs": "^6.4.0"
+  },
+  "bin": {
+    "hasmybikebeenfound": "./bin/has-my-bike-been-found.js"
+  },
+  "preferGlobal": true,
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
