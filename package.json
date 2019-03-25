@@ -29,10 +29,13 @@
   },
   "preferGlobal": true,
   "devDependencies": {
+    "@types/cheerio": "^0.22.11",
     "cross-env": "^5.2.0"
   },
   "nodemonConfig": {
-    "ignore": ["history.json"],
+    "ignore": [
+      "history.json"
+    ],
     "delay": "2500"
   }
 }
